@@ -5,6 +5,25 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/05-k
 
 https://github.com/kelseyhightower/kubernetes-the-hard-way/tree/c32977f3613498dadfb9b2f1405598e5da4ae169
 
+
+# kube 1.6 docs
+
+https://v1-6.docs.kubernetes.io/docs/admin/kubeadm/
+
+https://v1-6.docs.kubernetes.io/docs/admin/kubelet/
+
+https://v1-6.docs.kubernetes.io/docs/admin/kube-apiserver/
+
+https://v1-6.docs.kubernetes.io/docs/admin/kube-controller-manager/
+
+https://v1-6.docs.kubernetes.io/docs/admin/kube-proxy/
+
+https://v1-6.docs.kubernetes.io/docs/admin/kube-scheduler/
+
+https://v1-6.docs.kubernetes.io/docs/admin/federation-apiserver/
+
+https://v1-6.docs.kubernetes.io/docs/admin/federation-controller-manager/
+
 # Ingress
 nginx ingress controller doc:
 
@@ -33,6 +52,8 @@ poddomain.headlesservicename.namespace.svc.cluster.local
 # RBAC
 
 https://v1-6.docs.kubernetes.io/docs/admin/authorization/rbac/
+
+http://docs.heptio.com/content/tutorials/rbac.html
 
 
 # Jobs
