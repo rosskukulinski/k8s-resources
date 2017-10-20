@@ -1,0 +1,43 @@
+# Create your pod in this case we're using kuard
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kuard
+  labels:
+    run: kuard
+spec:
+  containers:
+  - image: gcr.io/kuar-demo/kuard-amd64:1
+    name: kuard
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+---
+# Create your service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: kuard
+  name: kuard
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: kuard
+---
+# Create the rule that makes the ingress come to life. A note, the get ingress rule can take some time to update to show its working
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kuard
+spec:
+  rules:
+  - host: kuard.192.168.99.100.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: kuard
+          servicePort: 8080

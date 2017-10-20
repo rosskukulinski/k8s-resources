@@ -15,6 +15,13 @@ baremetal w/ NodePort
     | kubectl apply -f -`
 
 
+# DNS
+https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-records-1
+
+pod-ip-address.my-namespace.pod.cluster.local
+
+poddomain.headlesservicename.namespace.svc.cluster.local
+
 # RBAC
 
 https://v1-6.docs.kubernetes.io/docs/admin/authorization/rbac/
@@ -22,6 +29,10 @@ https://v1-6.docs.kubernetes.io/docs/admin/authorization/rbac/
 
 # Jobs
 https://kubernetes.io/docs/tasks/job/coarse-parallel-processing-work-queue/
+
+# kubernetes master
+
+Certs/Token go to /var/lib/kubernetes/
 
 # Useful commands
 

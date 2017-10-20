@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+      - name: redis
+        image: redis:3.2
+        # image: redis
+        volumeMounts:
+        - name: cache-volume
+          mountPath: /cache
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+      volumes:
+      - name: cache-volume
+        emptyDir: {}
