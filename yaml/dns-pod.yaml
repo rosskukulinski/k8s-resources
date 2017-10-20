@@ -1,4 +1,4 @@
-# nslookup busybox-1.default-subdomain.cka.svc.cluster.local
+# nslookup busybox-1.default-subdomain.namespace.svc.cluster.local
 
 
 apiVersion: v1
